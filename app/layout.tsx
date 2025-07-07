@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import NavBarPage from "./navbar";
 
 const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 
@@ -71,7 +72,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <header>
+            <NavBarPage />
+          </header>
+          <main className="pt-16 z-0">{children}</main>
         </ThemeProvider>
       </body>
     </html>
