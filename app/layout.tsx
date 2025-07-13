@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Benjie Pecson Portfolio",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/profile.jpg`,
         width: 1200,
         height: 630,
         alt: "Benjie Pecson Portfolio",
@@ -55,8 +55,11 @@ export const metadata: Metadata = {
     title: "Benjie Pecson | Web and Mobile Developer Portfolio",
     description:
       "Discover the portfolio and work of Benjie Pecson, a web and mobile developer with a focus on modern technologies.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/profile.jpg`],
     creator: "@bnjpcson",
+  },
+  verification: {
+    google: "qANav5GpvogfsADSa327myvfMwjbpuSp2euBngZLv7Y",
   },
 };
 
