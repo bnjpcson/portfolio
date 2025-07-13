@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import NavBarPage from "./navbar";
+import FooterPage from "./footer-page";
+import React from "react";
 
 const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 
@@ -71,7 +74,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="w-full min-w-[375px] max-w-[2560px] mx-auto">
+            <header>
+              <NavBarPage />
+            </header>
+            <main>{children}</main>
+
+            <div className="w-full px-5 sm:px-14 md:px-20 lg:px-32 bg-secondary">
+              <FooterPage />
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
