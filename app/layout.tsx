@@ -16,23 +16,46 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Benjie Pecson | Portfolio",
+  title: "Benjie Pecson | Full Stack Web & Mobile Developer Portfolio",
   description:
-    "Explore the personal portfolio of Benjie Pecson - a web and mobile developer specializing in web and mobile technologies",
+    "Discover the work of Benjie Pecson, a full stack web and mobile developer specializing in modern technologies like React, Next.js, and Tailwind CSS. View projects, skills, and certifications.",
   keywords: [
     "Benjie Pecson",
-    "Front-End Developer",
+    "benjie pecson",
+    "bnjpcson",
+    "Bnjpcson",
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Backend Developer",
     "Web Developer",
-    "React",
-    "Next.js",
-    "Portfolio",
+    "Mobile Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Software Engineer",
+    "Web Portfolio",
     "Tailwind CSS",
-    "JavaScript",
+    "JavaScript Developer",
+    "TypeScript",
+    "UI/UX",
+    "Responsive Design",
   ],
   authors: [{ name: "Benjie Pecson", url: siteUrl }],
   creator: "Benjie Pecson",
   publisher: "Benjie Pecson",
   metadataBase: new URL(siteUrl),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Benjie Pecson | Web and Mobile Developer Portfolio",
     description:
@@ -41,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Benjie Pecson Portfolio",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/profile.jpg`,
         width: 1200,
         height: 630,
         alt: "Benjie Pecson Portfolio",
@@ -55,7 +78,7 @@ export const metadata: Metadata = {
     title: "Benjie Pecson | Web and Mobile Developer Portfolio",
     description:
       "Discover the portfolio and work of Benjie Pecson, a web and mobile developer with a focus on modern technologies.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/profile.jpg`],
     creator: "@bnjpcson",
   },
 };

@@ -1,6 +1,5 @@
 import RotatingText from "@/components/rotating-text";
 import Squares from "@/components/squares";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -57,7 +56,7 @@ export default function Home() {
   return (
     <div className="mt-16 z-0">
       <div className="relative h-[75vh]">
-        <div className="absolute h-[75vh] w-full bg-gray-200/90 dark:bg-gray-900/90 ">
+        <div className="absolute h-[75vh] w-full bg-gray-300 dark:bg-gray-900/90 ">
           <Squares
             speed={0.2}
             squareSize={80}
@@ -102,38 +101,46 @@ export default function Home() {
                   technologies.
                 </p>
                 <div className="flex flex-row gap-5 py-5">
-                  <Button
-                    size="sm"
-                    className="cursor-pointer border border-custom-blue bg-background text-custom-blue hover:bg-custom-blue hover:text-background "
+                  <Link
+                    href={"/projects"}
+                    className="cursor-pointer border-2 font-normal text-sm border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background rounded-sm px-3 py-1"
                   >
                     View my projects
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="cursor-pointer border border-primary bg-background text-primary hover:bg-primary hover:text-background "
+                  </Link>
+                  <Link
+                    href={"/files/BENJIE PECSON - Resume.pdf"}
+                    className="cursor-pointer border-2 font-medium text-sm border-primary bg-transparent text-primary hover:bg-primary hover:text-background rounded-sm px-3 py-1"
+                    target="_blank"
                   >
                     Download CV
-                  </Button>
+                  </Link>
                 </div>
                 <div className="flex flex-row w-full justify-between pr-5">
                   <Link
                     href="https://www.linkedin.com/in/bnjpcson/"
                     target="_blank"
+                    aria-label="LinkedIn URL"
                   >
                     {linkedinIcon}
                   </Link>
-                  <Link href="https://github.com/bnjpcson" target="_blank">
+                  <Link
+                    href="https://github.com/bnjpcson"
+                    target="_blank"
+                    aria-label="GitHub URL"
+                  >
                     {githubIcon}
                   </Link>
                   <Link
                     href="https://www.facebook.com/bnjpcson"
                     target="_blank"
+                    aria-label="Facebook URL"
                   >
                     {facebookIcon}
                   </Link>
                   <Link
                     href="https://www.instagram.com/bnjpcson/"
                     target="_blank"
+                    aria-label="Instagram URL"
                   >
                     {instagramIcon}
                   </Link>
