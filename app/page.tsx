@@ -107,13 +107,14 @@ export default function Home() {
                   >
                     View my projects
                   </Link>
-                  <Link
-                    href={"/files/BENJIE PECSON - Resume.pdf"}
-                    className="cursor-pointer border-2 font-medium text-sm border-primary bg-transparent text-primary hover:bg-primary hover:text-background rounded-sm px-3 py-1"
+                  <a
+                    href={"/files/BENJIE%20PECSON%20-%20Resume.pdf"}
                     target="_blank"
+                    className="cursor-pointer border-2 font-medium text-sm border-primary bg-transparent text-primary hover:bg-primary hover:text-background rounded-sm px-3 py-1"
+                    rel="noopener noreferrer"
                   >
                     Download CV
-                  </Link>
+                  </a>
                 </div>
                 <div className="flex flex-row w-full justify-between pr-5">
                   <Link
