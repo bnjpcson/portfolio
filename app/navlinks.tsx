@@ -22,28 +22,28 @@ export default function NavLinks() {
         <li
           className={`${currentPath == "/" && "border-primary border-b-2"} p-1`}
         >
-          <Link href={"/"}>Home</Link>
+          <Link href={"/"} aria-label="Home">Home</Link>
         </li>
         <li
           className={`${
             currentPath == "/about" && "border-primary border-b-2"
           } p-1`}
         >
-          <Link href={"/about"}>About</Link>
+          <Link href={"/about"} aria-label="About">About</Link>
         </li>
         <li
           className={`${
             currentPath == "/projects" && "border-primary border-b-2"
           } p-1`}
         >
-          <Link href={"/projects"}>Projects</Link>
+          <Link href={"/projects"} aria-label="Projects">Projects</Link>
         </li>
         <li
           className={`${
             currentPath == "/certificates" && "border-primary border-b-2"
           } p-1`}
         >
-          <Link href={"/certificates"}>Certificates</Link>
+          <Link href={"/certificates"} aria-label="Certificates">Certificates</Link>
         </li>
       </ul>
     </div>
@@ -62,7 +62,7 @@ export function NavSheet() {
     <div className="sm:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="cursor-pointer">
+          <Button variant="outline" size="icon" className="cursor-pointer" aria-label="Hamburger Menu">
             <AlignJustify className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all" />
           </Button>
         </SheetTrigger>
