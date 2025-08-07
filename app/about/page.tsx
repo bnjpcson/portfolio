@@ -42,13 +42,13 @@ export default function AboutPage() {
   ];
   return (
     <div className="mt-16 z-0">
-      <div className="flex flex-col h-[50vh] w-full bg-secondary items-center justify-center shadow-md">
-        <div className="flex flex-col items-start w-full gap-5  max-w-5xl px-10">
+      <div className="flex flex-col h-screen sm:h-[50vh] w-full bg-secondary items-center justify-center shadow-md">
+        <div className="flex flex-col items-start w-full gap-5 max-w-5xl px-10">
           <h1 className="text-4xl font-bold text-center w-full">About Me</h1>
           <p className="font-normal text-md text-center">
-            I&apos;m a passionate and detail-oriented software engineer with
-            professional experience building modern web applications using
-            technologies like Laravel, VueJS, React, and NodeJS. I specialize in
+            I&apos;m a passionate and detail-oriented software developer with
+            professional experience building modern web, mobile, and desktop applications using
+            different technologies and various tools. I specialize in
             creating scalable front-end and back-end systems, with a strong
             focus on clean architecture and user-centered design.
           </p>
@@ -93,18 +93,18 @@ export default function AboutPage() {
                       {experience.company_name}
                     </div>
                   </div>
-                  <div className="font-normal text-sm pl-14 md:pl-44 text-justify">
+                  <ul className="list-disc font-normal text-sm pl-14 md:pl-44 text-justify">
                     {experience.duties.map((duty, indx) => {
                       return (
                         <li
                           key={`duty-${index}-${indx}`}
-                          className="text-justify"
+                          className="py-0.5"
                         >
                           {duty}
                         </li>
                       );
                     })}
-                  </div>
+                  </ul>
                 </div>
               );
             })}
