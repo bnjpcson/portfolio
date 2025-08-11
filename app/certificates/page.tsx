@@ -4,7 +4,7 @@ export default function CertificatesPage() {
       <div className="flex flex-col h-[75vh] w-full bg-background py-10 shadow-md  items-center">
         <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10">
           <h1 className="text-4xl font-bold text-center w-full">
-            Awards & Certifications
+            <span className="text-primary">Awards</span> & Certifications
           </h1>
           <p className="font-normal text-md text-center">
             Showcasing validated skills through certifications, awards, and
