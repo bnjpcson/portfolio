@@ -3,8 +3,10 @@ import Squares from "@/components/squares";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import WhatIDoSection from "./what-i-do";
+import AosInitializer from "@/components/aos-initialer";
 
-export default function Home() {
+function BannerSection() {
   const facebookIcon = (
     <svg
       viewBox="0 0 20 20"
@@ -54,113 +56,123 @@ export default function Home() {
   );
 
   return (
-    <div className="mt-16 z-0">
-      <div className="relative h-[75vh]">
-        <div className="absolute h-[75vh] w-full bg-gray-300 dark:bg-gray-900/90 ">
-          <Squares
-            speed={0.2}
-            squareSize={80}
-            direction="down" // up, down, left, right, diagonal
-            borderColor="#8c8891"
-            hoverFillColor="#8c8891"
-          />
-        </div>
-        <div className="absolute flex flex-col items-center w-full h-full justify-center">
-          <div className="flex flex-col justify-center items-center w-full sm:px-14 md:px-20 lg:px-32">
-            <div className="flex flex-col md:flex-row justify-center items-start w-full px-5 ">
-              <div className="flex flex-col w-full gap-3 h-full justify-center">
-                <div className="relative size-20 overflow-hidden rounded-full md:hidden">
-                  <Image
-                    src={"/profile.jpg"}
-                    alt={"Profile"}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h1 className="font-bold text-5xl flex flex-col items-start gap-3">
-                  <RotatingText
-                    texts={["Web", "Mobile", "Software"]}
-                    mainClassName="px-2 sm:px-2 md:px-3 bg-primary text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-                    staggerFrom={"last"}
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-120%" }}
-                    staggerDuration={0.025}
-                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                    transition={{
-                      type: "spring",
-                      damping: 30,
-                      stiffness: 400,
-                    }}
-                    rotationInterval={2000}
-                  />
-                  Developer
-                </h1>
-                <p className="font-normal text-md">
-                  Hi! I&lsquo;m Benjie, specialized in web and mobile
-                  technologies.
-                </p>
-                <div className="flex flex-row gap-5 py-5">
-                  <Link
-                    href={"/projects"}
-                    className="cursor-pointer border-2 font-normal text-sm border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background rounded-sm px-3 py-1"
-                  >
-                    View my projects
-                  </Link>
-                  <a
-                    href={"/files/BENJIE%20PECSON%20-%20Resume.pdf"}
-                    target="_blank"
-                    className="cursor-pointer border-2 font-medium text-sm border-primary bg-transparent text-primary hover:bg-primary hover:text-background rounded-sm px-3 py-1"
-                    rel="noopener noreferrer"
-                  >
-                    Download CV
-                  </a>
-                </div>
-                <div className="flex flex-row w-full justify-between pr-5">
-                  <Link
-                    href="https://www.linkedin.com/in/bnjpcson/"
-                    target="_blank"
-                    aria-label="LinkedIn URL"
-                  >
-                    {linkedinIcon}
-                  </Link>
-                  <Link
-                    href="https://github.com/bnjpcson"
-                    target="_blank"
-                    aria-label="GitHub URL"
-                  >
-                    {githubIcon}
-                  </Link>
-                  <Link
-                    href="https://www.facebook.com/bnjpcson"
-                    target="_blank"
-                    aria-label="Facebook URL"
-                  >
-                    {facebookIcon}
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/bnjpcson/"
-                    target="_blank"
-                    aria-label="Instagram URL"
-                  >
-                    {instagramIcon}
-                  </Link>
-                </div>
+    <div className="relative h-[75vh]">
+      <div className="absolute h-[75vh] w-full bg-gray-300 dark:bg-gray-900/90 ">
+        <Squares
+          speed={0.2}
+          squareSize={80}
+          direction="down" // up, down, left, right, diagonal
+          borderColor="#8c8891"
+          hoverFillColor="#8c8891"
+        />
+      </div>
+      <div className="absolute flex flex-col items-center w-full h-full justify-center">
+        <div className="flex flex-col justify-center items-center w-full sm:px-14 md:px-20 lg:px-32">
+          <div className="flex flex-col md:flex-row justify-center items-start w-full px-5 ">
+            <div className="flex flex-col w-full gap-3 h-full justify-center">
+              <div className="relative size-20 overflow-hidden rounded-full md:hidden">
+                <Image
+                  src={"/profile.jpg"}
+                  alt={"Profile"}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="md:flex flex-col justify-center items-center w-2/3 hidden h-full">
-                <div className="relative size-75 overflow-hidden rounded-full">
-                  <Image
-                    src={"/profile.jpg"}
-                    alt={"Profile"}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              <h1 className="font-bold text-5xl flex flex-col items-start gap-3">
+                <RotatingText
+                  texts={["Web", "Mobile", "Software"]}
+                  mainClassName="px-2 sm:px-2 md:px-3 bg-primary text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{
+                    type: "spring",
+                    damping: 30,
+                    stiffness: 400,
+                  }}
+                  rotationInterval={2000}
+                />
+                Developer
+              </h1>
+              <p className="font-normal text-md">
+                Hi! I&lsquo;m Benjie, specialized in web and mobile
+                technologies.
+              </p>
+              <div className="flex flex-row gap-5 py-5">
+                <Link
+                  href={"/projects"}
+                  className="cursor-pointer border-2 font-normal text-sm border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background rounded-sm px-3 py-1"
+                >
+                  View my projects
+                </Link>
+                <a
+                  href={"/files/BENJIE%20PECSON%20-%20Resume.pdf"}
+                  target="_blank"
+                  className="cursor-pointer border-2 font-medium text-sm border-primary bg-transparent text-primary hover:bg-primary hover:text-background rounded-sm px-3 py-1"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </div>
+              <div className="flex flex-row w-full justify-between pr-5">
+                <Link
+                  href="https://www.linkedin.com/in/bnjpcson/"
+                  target="_blank"
+                  aria-label="LinkedIn URL"
+                >
+                  {linkedinIcon}
+                </Link>
+                <Link
+                  href="https://github.com/bnjpcson"
+                  target="_blank"
+                  aria-label="GitHub URL"
+                >
+                  {githubIcon}
+                </Link>
+                <Link
+                  href="https://www.facebook.com/bnjpcson"
+                  target="_blank"
+                  aria-label="Facebook URL"
+                >
+                  {facebookIcon}
+                </Link>
+                <Link
+                  href="https://www.instagram.com/bnjpcson/"
+                  target="_blank"
+                  aria-label="Instagram URL"
+                >
+                  {instagramIcon}
+                </Link>
+              </div>
+            </div>
+            <div className="md:flex flex-col justify-center items-center w-2/3 hidden h-full">
+              <div className="relative size-75 overflow-hidden rounded-full">
+                <Image
+                  src={"/profile.jpg"}
+                  alt={"Profile"}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <AosInitializer/>
+      <div className="mt-16 z-0">
+        <BannerSection />
+        <WhatIDoSection />
+      </div>
+    </>
   );
 }
