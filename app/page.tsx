@@ -4,6 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import WhatIDoSection from "./what-i-do";
+import AosInitializer from "@/components/aos-initialer";
+import WhatIUse from "./what-i-use";
+
+
 export default function Home() {
   const facebookIcon = (
     <svg
@@ -164,3 +169,17 @@ export default function Home() {
     </div>
   );
 }
+
+export default function Home() {
+  return (
+    <>
+      <AosInitializer />
+      <div className="mt-16 z-0">
+        <BannerSection />
+        <WhatIDoSection />
+        <WhatIUse />
+      </div>
+    </>
+  );
+}
+
