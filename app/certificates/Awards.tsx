@@ -1,4 +1,9 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Awards() {
   const awards = [
@@ -63,41 +68,52 @@ export default function Awards() {
     }
   };
 
-  return (
-    <div className="px-5 sm:px-10 py-10 h-full">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {awards.map((award, index) => (
-          <div key={index} data-aos="zoom-in">
-            <Card className="card-elegant h-full p-4 flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-              <div className="flex flex-col">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2 leading-tight">
-                      {award.title}
-                    </h3>
-                    <p className="text-primary font-medium">{award.issuer}</p>
-                  </div>
-                  <span
-                    className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
-                      award.type
-                    )}`}
-                  >
-                    {award.type}
-                  </span>
-                </div>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                  {award.description}
-                </p>
-              </div>
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+    });
+  }, []);
 
-              <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span className="font-medium">{award.date}</span>
-                <span className="font-mono">{award.credentialId}</span>
-              </div>
-            </Card>
-          </div>
-        ))}
+  return (
+    <>
+      <div className="px-5 sm:px-10 py-10 h-full">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {awards.map((award, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+            >
+              <Card className="card-elegant h-full p-4 flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="flex flex-col">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 leading-tight">
+                        {award.title}
+                      </h3>
+                      <p className="text-primary font-medium">{award.issuer}</p>
+                    </div>
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(
+                        award.type
+                      )}`}
+                    >
+                      {award.type}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {award.description}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <span className="font-medium">{award.date}</span>
+                  <span className="font-mono">{award.credentialId}</span>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
