@@ -6,6 +6,7 @@ import { Image as ImageIcon } from "lucide-react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function Projects() {
   const projects = [
@@ -15,7 +16,7 @@ export default function Projects() {
       description:
         "Developed Stressio, a self-care mobile application for stress management as part of a capstone project. The app tracks users' daily mood and monthly Perceived Stress Scale (PSS) scores, and recommends personalized self-care activities. Built using the Flutter framework with Firebase Database for backend support.",
       technologies: ["Dart", "Flutter", "Firebase"],
-      image: "/api/placeholder/400/300",
+      image: "/stressio.jpg",
       demoUrl: "",
       githubUrl: "https://github.com/bnjpcson/stressio",
     },
@@ -25,7 +26,7 @@ export default function Projects() {
       description:
         "Designed and developed Windows applications for employee ID generation. Created a user-friendly form to collect essential employee information for ID processing. Integrated digital pen and webcam support to capture employee signatures and photos seamlessly.",
       technologies: ["C# Windows Form Application"],
-      image: "/api/placeholder/400/300",
+      image: "",
       demoUrl: "",
       githubUrl: "",
     },
@@ -48,12 +49,25 @@ export default function Projects() {
               <Card className="card-project h-full p-0 shadow-md">
                 <div className="h-full flex flex-col justify-between">
                   <div className="flex flex-col">
-                    <div className="aspect-video relative overflow-hidden p-0 rounded-t-xl bg-secondary/30">
-                      <div className="absolute inset-0 bg-gradient-primary opacity-20"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <ImageIcon color="gray" />
+                    {project.image != "" ? (
+                      <div className="relative aspect-video overflow-hidden p-0 rounded-t-xl  w-full">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover"
+                          unoptimized
+                        />
                       </div>
-                    </div>
+                    ) : (
+                      <div className="aspect-video relative overflow-hidden p-0 rounded-t-xl bg-secondary/30">
+                        <div className="absolute inset-0 bg-gradient-primary opacity-20"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <ImageIcon color="gray" />
+                        </div>
+                      </div>
+                    )}
 
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
