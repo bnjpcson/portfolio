@@ -81,11 +81,9 @@ export default function Awards() {
           {awards.map((award, index) => (
             <div
               key={index}
-              className="fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
               data-aos="zoom-in"
             >
-              <Card className="card-elegant h-full p-4 flex flex-col justify-between">
+              <Card className="card-elegant h-full p-4 flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="flex flex-col">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
