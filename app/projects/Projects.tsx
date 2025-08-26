@@ -3,9 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Image as ImageIcon } from "lucide-react";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
 
 export default function Projects() {
@@ -31,12 +28,6 @@ export default function Projects() {
       githubUrl: "",
     },
   ];
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800, // animation duration in ms
-    });
-  }, []);
 
   return (
     <div className="px-5 sm:px-10 py-10 h-full">
