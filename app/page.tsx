@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import WhatIDoSection from "./what-i-do";
 import AosInitializer from "@/components/aos-initialer";
+import WhatIUse from "./what-i-use";
 
 function BannerSection() {
   const facebookIcon = (
@@ -168,10 +169,11 @@ function BannerSection() {
 export default function Home() {
   return (
     <>
-      <AosInitializer/>
+      <AosInitializer />
       <div className="mt-16 z-0">
         <BannerSection />
         <WhatIDoSection />
+        <WhatIUse />
       </div>
     </>
   );
