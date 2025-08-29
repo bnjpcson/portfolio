@@ -50,7 +50,7 @@ export default function Awards() {
       date: "July 26, 2023",
       type: "Certification",
       description:
-        "An international certification indicating Level 2 proficiency, signifying the holder is an advanced beginner capable of understanding and evaluating technical and business problems in the field of ICT, though not yet fully capable of independently solving complex issues.",
+        "TOPCIT Level 2 Certification signifies advanced beginner proficiency in ICT. Holders can evaluate and solve routine technical and business problems, applying foundational knowledge.",
       credentialId: "CN: TL2305001198",
     },
   ];
@@ -79,10 +79,7 @@ export default function Awards() {
       <div className="px-5 sm:px-10 py-10 h-full">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {awards.map((award, index) => (
-            <div
-              key={index}
-              data-aos="zoom-in"
-            >
+            <div key={index} data-aos="zoom-in">
               <Card className="card-elegant h-full p-4 flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="flex flex-col">
                   <div className="flex items-start justify-between mb-4">

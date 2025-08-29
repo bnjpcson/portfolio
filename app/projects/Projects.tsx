@@ -26,9 +26,9 @@ export default function Projects() {
       description:
         "Designed and developed Windows applications for employee ID generation. Created a user-friendly form to collect essential employee information for ID processing. Integrated digital pen and webcam support to capture employee signatures and photos seamlessly.",
       technologies: ["C# Windows Form Application"],
-      image: "",
+      image: "/id-mockup.jpg",
       demoUrl: "",
-      githubUrl: "",
+      githubUrl: "https://github.com/bnjpcson/id-system",
     },
   ];
 
