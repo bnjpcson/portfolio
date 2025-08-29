@@ -174,7 +174,7 @@ export default function WhatIUse() {
         </p>
       </div>
 
-      <div className="py-5 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-10 gap-10 justify-items-center place-items-center">
+      <div className="py-5 grid grid-cols-5 sm:grid-cols-8 lg:grid-cols-10 gap-10 justify-items-center place-items-center">
         {icons.map((icon) => {
           return (
             <div key={icon.id} data-aos="zoom-in">
@@ -182,8 +182,8 @@ export default function WhatIUse() {
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                width={64}
-                height={64}
+                width={36}
+                height={36}
                 fill={icon.fill}
               >
                 <title>{icon.title}</title>
