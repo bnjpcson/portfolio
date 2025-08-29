@@ -7,9 +7,7 @@ import WhatIDoSection from "./what-i-do";
 import AosInitializer from "@/components/aos-initializer";
 import WhatIUse from "./what-i-use";
 
-
 function BannerSection() {
-
   const facebookIcon = (
     <svg
       viewBox="0 0 20 20"
