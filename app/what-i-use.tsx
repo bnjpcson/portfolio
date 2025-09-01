@@ -163,8 +163,8 @@ export default function WhatIUse() {
   ];
 
   return (
-    <div className="flex flex-col  w-full bg-secondary py-10 shadow-md  items-center">
-      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10">
+    <div className="flex flex-col  w-full bg-secondary py-18 shadow-md  items-center">
+      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10" data-aos="fade-up">
         <h1 className="text-4xl font-bold text-center w-full">
           <span className="text-primary">What</span> I Use
         </h1>
@@ -174,7 +174,7 @@ export default function WhatIUse() {
         </p>
       </div>
 
-      <div className="py-5 grid grid-cols-5 sm:grid-cols-8 lg:grid-cols-10 gap-10 justify-items-center place-items-center">
+      <div className="py-5 grid grid-cols-5 sm:grid-cols-8 lg:grid-cols-10 gap-10 justify-items-center place-items-center w-full max-w-6xl px-5">
         {icons.map((icon) => {
           return (
             <div key={icon.id} data-aos="zoom-in">
@@ -192,10 +192,6 @@ export default function WhatIUse() {
             </div>
           );
         })}
-      </div>
-
-      <div className="w-full pt-10">
-        <hr />
       </div>
     </div>
   );

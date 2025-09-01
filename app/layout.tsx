@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import NavBarPage from "./navbar";
 import FooterPage from "./footer-page";
 import React from "react";
+import { Toaster } from "sonner";
 
 const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 
@@ -111,6 +112,7 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );
