@@ -6,6 +6,7 @@ import React from "react";
 import WhatIDoSection from "./what-i-do";
 import AosInitializer from "@/components/aos-initializer";
 import WhatIUse from "./what-i-use";
+import { ContactForm } from "./contact-form";
 
 function BannerSection() {
   const facebookIcon = (
@@ -166,6 +167,25 @@ function BannerSection() {
   );
 }
 
+function ContactSection() {
+  return (
+    <div className="flex flex-col w-full bg-background py-16 shadow-md  items-center">
+      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10" data-aos="fade-up">
+        <h1 className="text-4xl font-bold text-center w-full">
+          <span className="text-primary">Let&apos;s</span> Get in Touch
+        </h1>
+        <p className="font-normal text-md text-center">
+          Fill out the form, and I&apos;ll get back to you as soon as possible.
+        </p>
+      </div>
+
+      <div className="px-5 sm:px-10 py-5 h-full lg:px-24 w-full  max-w-4xl"  data-aos="fade-up">
+        <ContactForm />
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -174,6 +194,7 @@ export default function Home() {
         <BannerSection />
         <WhatIDoSection />
         <WhatIUse />
+        <ContactSection />
       </div>
     </>
   );
