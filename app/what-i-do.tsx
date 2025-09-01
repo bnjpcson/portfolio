@@ -26,8 +26,8 @@ export default function WhatIDoSection() {
 
 
   return (
-    <div className="flex flex-col  w-full bg-background py-10 shadow-md  items-center">
-      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10">
+    <div className="flex flex-col  w-full bg-background py-18 shadow-md  items-center">
+      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10" data-aos="fade-up">
         <h1 className="text-4xl font-bold text-center w-full">
           <span className="text-primary">What</span> I Do
         </h1>
