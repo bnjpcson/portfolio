@@ -1,15 +1,18 @@
-import Aurora from "@/components/aurora";
-
 export default function AboutPage() {
   const BannerSection = () => {
     return (
       <>
-        <div className="flex flex-col h-screen sm:h-[50vh] w-full items-center justify-center shadow-md">
-          <div className="flex flex-col items-start w-full gap-5 max-w-5xl px-10">
+        <div className="flex flex-col w-full items-center justify-center shadow-md py-10">
+          <div className="flex flex-col items-start w-full gap-5 max-w-2xl px-10">
             <h1 className="text-4xl font-bold text-center w-full">
-              <span className="text-primary">About</span> Me
+              <span className="gradient-text" data-color="primary">
+                About
+              </span>{" "}
+              <span className="gradient-text" data-color="foreground">
+                Me
+              </span>
             </h1>
-            <p className="font-normal text-md text-center">
+            <p className="font-normal text-sm text-center">
               I&apos;m a passionate and detail-oriented software developer with
               professional experience building modern web, mobile, and desktop
               applications using different technologies and various tools. I
@@ -17,7 +20,7 @@ export default function AboutPage() {
               with a strong focus on clean architecture and user-centered
               design.
             </p>
-            <p className="font-normal text-md text-center">
+            <p className="font-normal text-sm text-center">
               I took my degree in Information Technology, majoring in Web and
               Mobile Technologies, from Pangasinan State University. Since then,
               I&apos;ve worked with companies where I contributed to the design,
@@ -128,8 +131,8 @@ export default function AboutPage() {
 
   return (
     <div className="mt-16 z-0">
-      <div className="relative h-screen w-full sm:h-[50vh]">
-        <div className="absolute w-full h-screen sm:h-[50vh]">
+      {/* <div className="relative h-[60vh] w-full sm:h-[50vh]">
+        <div className="absolute w-full h-[60vh] sm:h-[50vh]">
           <Aurora
             colorStops={["#F08838", "#B19EBF", "#5227FF"]}
             blend={0.5}
@@ -138,9 +141,12 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="absolute w-full h-screen sm:h-[50vh]">
+        <div className="absolute w-full h-[60vh] sm:h-[50vh]">
           <BannerSection />
         </div>
+      </div> */}
+      <div className="w-full">
+        <BannerSection />
       </div>
 
       <ExperienceSection />

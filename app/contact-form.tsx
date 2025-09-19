@@ -80,47 +80,53 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <Label htmlFor="name">
-        Name<span className="text-red-500">*</span>
-      </Label>
-      <Input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={form.name}
-        onChange={handleChange}
-        required
-      />
-      {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div className="space-y-3">
+        <Label htmlFor="name">
+          Name<span className="text-red-500">*</span>
+        </Label>
+        <Input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={form.name}
+          onChange={handleChange}
+          required
+        />
+        {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+      </div>
 
-      <Label htmlFor="email">
-        Email<span className="text-red-500">*</span>
-      </Label>
-      <Input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={form.email}
-        onChange={handleChange}
-        required
-      />
-      {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+      <div className="space-y-3">
+        <Label htmlFor="email">
+          Email<span className="text-red-500">*</span>
+        </Label>
+        <Input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
+        {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+      </div>
 
-      <Label htmlFor="message">
-        Message<span className="text-red-500">*</span>
-      </Label>
-      <Textarea
-        name="message"
-        placeholder="Your Message"
-        rows={20}
-        value={form.message}
-        onChange={handleChange}
-        required
-      />
-      {errors.message && (
-        <p className="text-sm text-red-500">{errors.message}</p>
-      )}
+      <div className="space-y-3">
+        <Label htmlFor="message">
+          Message<span className="text-red-500">*</span>
+        </Label>
+        <Textarea
+          name="message"
+          placeholder="Your Message"
+          rows={20}
+          value={form.message}
+          onChange={handleChange}
+          required
+        />
+        {errors.message && (
+          <p className="text-sm text-red-500">{errors.message}</p>
+        )}
+      </div>
 
       <Button
         type="submit"
