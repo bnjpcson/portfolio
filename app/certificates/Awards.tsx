@@ -1,8 +1,6 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Awards() {
@@ -67,12 +65,6 @@ export default function Awards() {
         return "bg-muted text-muted-foreground";
     }
   };
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800, // animation duration in ms
-    });
-  }, []);
 
   return (
     <>

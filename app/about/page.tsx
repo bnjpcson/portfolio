@@ -1,3 +1,5 @@
+import AosInitializer from "@/components/aos-initializer";
+
 export default function AboutPage() {
   const BannerSection = () => {
     return (
@@ -77,12 +79,17 @@ export default function AboutPage() {
 
     return (
       <>
+        <AosInitializer/>
         <div className="flex flex-col items-center w-full">
           <div className="flex flex-col px-5 items-center text-light min-h-screen max-w-6xl sm:px-20 md:px-40 lg:px-60">
             <div className="py-10 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent w-full">
               {experiences.map((experience, index) => {
                 return (
-                  <div className="relative" key={`exp-${index}`}>
+                  <div
+                    className="relative"
+                    key={`exp-${index}`}
+                    data-aos="fade-up"
+                  >
                     <div className="md:flex items-center md:space-x-4 mb-3">
                       <div className="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
                         <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1">
