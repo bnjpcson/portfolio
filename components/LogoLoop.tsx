@@ -346,6 +346,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
             aria-label={itemAriaLabel || "logo link"}
             target="_blank"
             rel="noreferrer noopener"
+            tabIndex={-1}
           >
             {content}
           </a>
@@ -361,6 +362,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
             )}
             key={key}
             role="listitem"
+            tabIndex={-1}
           >
             {inner}
           </li>
