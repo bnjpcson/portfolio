@@ -6,9 +6,14 @@ export default function CertificatesPage() {
       <div className="flex flex-col  w-full bg-background py-10 shadow-md  items-center">
         <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10">
           <h1 className="text-4xl font-bold text-center w-full">
-            <span className="text-primary">Awards</span> & Certifications
+            <span className="gradient-text" data-color="primary">
+              Awards
+            </span>{" "}
+            <span className="gradient-text" data-color="foreground">
+              & Certifications
+            </span>
           </h1>
-          <p className="font-normal text-md text-center">
+          <p className="font-normal text-sm text-center">
             Showcasing validated skills through certifications, awards, and
             professional accomplishments.
           </p>

@@ -120,6 +120,48 @@ body {
   --custom-blue: oklch(53.158% 0.09482 260.766);
 }
 
+.gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Primary */
+.gradient-text[data-color="primary"] {
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary),
+    color-mix(in srgb, var(--primary) 50%, transparent)
+  );
+}
+
+/* Secondary */
+.gradient-text[data-color="secondary"] {
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary),
+    color-mix(in srgb, var(--secondary) 50%, transparent)
+  );
+}
+
+/* Foreground */
+.gradient-text[data-color="foreground"] {
+  background-image: linear-gradient(
+    to bottom,
+    var(--foreground),
+    color-mix(in srgb, var(--foreground) 50%, transparent)
+  );
+}
+
+/* Background */
+.gradient-text[data-color="background"] {
+  background-image: linear-gradient(
+    to bottom,
+    var(--background),
+    color-mix(in srgb, var(--background) 50%, transparent)
+  );
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

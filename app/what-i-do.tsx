@@ -24,14 +24,21 @@ export default function WhatIDoSection() {
     },
   ];
 
-
   return (
     <div className="flex flex-col  w-full bg-background py-18 shadow-md  items-center">
-      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10" data-aos="fade-up">
+      <div
+        className="flex flex-col w-full gap-3 text-center max-w-2xl px-10"
+        data-aos="fade-up"
+      >
         <h1 className="text-4xl font-bold text-center w-full">
-          <span className="text-primary">What</span> I Do
+          <span className="gradient-text" data-color="primary">
+            What
+          </span>{" "}
+          <span className="gradient-text" data-color="foreground">
+            I Do
+          </span>
         </h1>
-        <p className="font-normal text-md text-center">
+        <p className="font-normal text-sm text-center">
           Delivering scalable solutions across web, mobile, and desktop using
           modern, efficient tech stacks.
         </p>
@@ -48,9 +55,12 @@ export default function WhatIDoSection() {
               >
                 <div className="flex items-center mb-4 flex-row">
                   {service.icon}
-                  <h5 className="ml-3 text-lg font-semibold leading-tight">
+                  <h1
+                    className="ml-3 text-lg font-semibold leading-tight gradient-text"
+                    data-color="foreground"
+                  >
                     {service.name}
-                  </h5>
+                  </h1>
                 </div>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {service.desc}

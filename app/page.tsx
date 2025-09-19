@@ -7,6 +7,8 @@ import WhatIDoSection from "./what-i-do";
 import AosInitializer from "@/components/aos-initializer";
 import WhatIUse from "./what-i-use";
 import { ContactForm } from "./contact-form";
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin } from "lucide-react";
 
 function BannerSection() {
   const facebookIcon = (
@@ -70,8 +72,15 @@ function BannerSection() {
       </div>
       <div className="absolute flex flex-col items-center w-full h-full justify-center">
         <div className="flex flex-col justify-center items-center w-full sm:px-14 md:px-20 lg:px-32">
-          <div className="flex flex-col md:flex-row justify-center items-start w-full px-5 ">
+          <div className="flex flex-col md:flex-row justify-center items-start w-full px-5 gap-2">
             <div className="flex flex-col w-full gap-3 h-full justify-center">
+              <div className="flex flex-row items-center gap-0.5">
+                <MapPin className="text-red-500" size={16} />
+                <span className="text-sm font-medium md:hidden">PH</span>
+                <span className="text-sm font-medium hidden md:flex">
+                  Philippines
+                </span>
+              </div>
               <div className="relative size-20 overflow-hidden rounded-full md:hidden">
                 <Image
                   src={"/profile.jpg"}
@@ -97,12 +106,14 @@ function BannerSection() {
                   }}
                   rotationInterval={2000}
                 />
-                Developer
+                <span className="gradient-text" data-color="foreground">Developer</span>
               </h1>
+
               <p className="font-normal text-md">
                 Hi! I&lsquo;m Benjie, specialized in web and mobile
                 technologies.
               </p>
+
               <div className="flex flex-row gap-5 py-5">
                 <Link
                   href={"/projects"}
@@ -170,17 +181,32 @@ function BannerSection() {
 function ContactSection() {
   return (
     <div className="flex flex-col w-full bg-background py-16 shadow-md  items-center">
-      <div className="flex flex-col w-full gap-5 text-center max-w-2xl px-10" data-aos="fade-up">
+      <div
+        className="flex flex-col w-full gap-3 text-center max-w-2xl px-10"
+        data-aos="fade-up"
+      >
         <h1 className="text-4xl font-bold text-center w-full">
-          <span className="text-primary">Let&apos;s</span> Get in Touch
+          <span className="gradient-text" data-color="primary">
+            Let&apos;s
+          </span>{" "}
+          <span className="gradient-text" data-color="foreground">
+            Get in Touch
+          </span>
         </h1>
-        <p className="font-normal text-md text-center">
+        <p className="font-normal text-sm text-center">
           Fill out the form, and I&apos;ll get back to you as soon as possible.
         </p>
       </div>
 
-      <div className="px-5 sm:px-10 py-5 h-full lg:px-24 w-full  max-w-4xl"  data-aos="fade-up">
-        <ContactForm />
+      <div
+        className="px-5 sm:px-10 py-10 h-full lg:px-24 w-full  max-w-4xl"
+        data-aos="fade-up"
+      >
+        <Card className="w-full px-1 py-8">
+          <CardContent>
+            <ContactForm />
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

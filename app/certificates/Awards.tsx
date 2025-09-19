@@ -14,7 +14,7 @@ export default function Awards() {
       type: "Certification",
       description:
         "Certification awarded to individuals who passed the proficiency test or completed a training course conducted by the DICT, covering Systems Analysis and Design, and Computer Programming courses in Java, C#, or Visual Basic.",
-      credentialId: "CN: 320114240005",
+      credentialId: "",
     },
     {
       title: "Certificate of Proficiency in Computer Programming",
@@ -51,7 +51,7 @@ export default function Awards() {
       type: "Certification",
       description:
         "TOPCIT Level 2 Certification signifies advanced beginner proficiency in ICT. Holders can evaluate and solve routine technical and business problems, applying foundational knowledge.",
-      credentialId: "CN: TL2305001198",
+      credentialId: "",
     },
   ];
 
