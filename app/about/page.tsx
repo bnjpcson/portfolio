@@ -1,4 +1,5 @@
 import AosInitializer from "@/components/aos-initializer";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function AboutPage() {
   const BannerSection = () => {
@@ -79,7 +80,6 @@ export default function AboutPage() {
 
     return (
       <>
-        <AosInitializer/>
         <div className="flex flex-col items-center w-full">
           <div className="flex flex-col px-5 items-center text-light min-h-screen max-w-6xl sm:px-20 md:px-40 lg:px-60">
             <div className="py-10 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent w-full">
@@ -138,6 +138,7 @@ export default function AboutPage() {
 
   return (
     <div className="mt-16 z-0">
+      <AosInitializer />
       {/* <div className="relative h-[60vh] w-full sm:h-[50vh]">
         <div className="absolute w-full h-[60vh] sm:h-[50vh]">
           <Aurora
@@ -152,9 +153,11 @@ export default function AboutPage() {
           <BannerSection />
         </div>
       </div> */}
-      <div className="w-full">
-        <BannerSection />
-      </div>
+      <BackgroundBeamsWithCollision>
+        <div className="w-full">
+          <BannerSection />
+        </div>
+      </BackgroundBeamsWithCollision>
 
       <ExperienceSection />
     </div>

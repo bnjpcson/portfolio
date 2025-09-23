@@ -49,7 +49,7 @@ export default function WhatIDoSection() {
           {services.map((service) => {
             return (
               <div
-                className="flex flex-col shadow-sm border rounded-lg w-full p-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                className="flex flex-col bg-background shadow-md border rounded-lg w-full p-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
                 key={service.id}
                 data-aos="zoom-in"
               >

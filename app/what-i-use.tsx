@@ -165,7 +165,7 @@ export default function WhatIUse() {
   ];
 
   return (
-    <div className="flex flex-col  w-full bg-secondary py-18 shadow-md  items-center">
+    <div className="flex flex-col w-full bg-secondary py-18 items-center">
       <div
         className="flex flex-col w-full gap-3 text-center max-w-xl px-10"
         data-aos="fade-up"
