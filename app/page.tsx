@@ -6,10 +6,7 @@ import React from "react";
 import WhatIDoSection from "./what-i-do";
 import AosInitializer from "@/components/aos-initializer";
 import WhatIUse from "./what-i-use";
-import { ContactForm } from "./contact-form";
-import { Card, CardContent } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
-import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 function BannerSection() {
@@ -182,39 +179,7 @@ function BannerSection() {
   );
 }
 
-function ContactSection() {
-  return (
-    <div className="flex flex-col w-full bg-background py-16 items-center">
-      <div
-        className="flex flex-col w-full gap-3 text-center max-w-2xl px-10"
-        data-aos="fade-up"
-      >
-        <h1 className="text-4xl font-bold text-center w-full">
-          <span className="gradient-text" data-color="primary">
-            Let&apos;s
-          </span>{" "}
-          <span className="gradient-text" data-color="foreground">
-            Get in Touch
-          </span>
-        </h1>
-        <p className="font-normal text-sm text-center">
-          Fill out the form, and I&apos;ll get back to you as soon as possible.
-        </p>
-      </div>
 
-      <div
-        className="px-5 sm:px-10 py-10 h-full lg:px-24 w-full  max-w-4xl"
-        data-aos="fade-up"
-      >
-        <Card className="w-full px-1 py-8 shadow-lg border">
-          <CardContent>
-            <ContactForm />
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -228,18 +193,6 @@ export default function Home() {
         </BackgroundBeamsWithCollision>
 
         <WhatIUse />
-
-        <div className="relative h-full w-full overflow-hidden bg-red-500">
-          <FlickeringGrid
-            className="absolute inset-0 z-0 size-full w-full h-full p-0 m-0"
-            squareSize={2}
-            gridGap={4}
-            color="#6B7280"
-            maxOpacity={0.5}
-            flickerChance={0.1}
-          />
-          <ContactSection />
-        </div>
       </div>
     </>
   );
