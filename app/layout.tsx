@@ -106,10 +106,7 @@ export default function RootLayout({
               <NavBarPage />
             </header>
             <main>{children}</main>
-
-            <div className="w-full px-5 sm:px-14 md:px-20 lg:px-32 bg-secondary">
-              <FooterPage />
-            </div>
+            <FooterPage />
           </div>
         </ThemeProvider>
         <Toaster richColors position="top-right" />
