@@ -6,6 +6,7 @@ import NavBarPage from "./navbar";
 import FooterPage from "./footer-page";
 import React from "react";
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 
@@ -94,6 +95,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Load reCAPTCHA v3 */}
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${poppins.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
