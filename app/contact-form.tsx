@@ -28,10 +28,20 @@ export function ContactForm() {
     try {
       setIsLoading(true);
 
+      // Wait for grecaptcha to be ready
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const grecaptcha = (window as any).grecaptcha;
+      if (!grecaptcha) throw new Error("reCAPTCHA not loaded");
+
+      const token = await grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!,
+        { action: "submit" }
+      );
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, recaptchaToken: token }),
       });
 
       const data = await res.json();
@@ -42,7 +52,6 @@ export function ContactForm() {
         }
         throw new Error("Validation or server error");
       }
-
       toast.success("Your message was sent successfully!");
       setForm({ name: "", email: "", message: "" }); // reset form
     } catch {
