@@ -59,8 +59,8 @@ function BannerSection() {
   );
 
   return (
-    <div className="relative h-[75vh]">
-      <div className="absolute h-[75vh] w-full bg-gray-300 dark:bg-gray-900/90 ">
+    <div className="relative h-[80vh]">
+      <div className="absolute h-[80vh] w-full bg-gray-300 dark:bg-gray-900/90 ">
         <Squares
           speed={0.2}
           squareSize={80}
@@ -88,6 +88,7 @@ function BannerSection() {
                   className="object-cover"
                   loading="eager"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
                 />
               </div>
               <h1 className="font-bold text-5xl flex flex-col items-start gap-3">
@@ -173,6 +174,7 @@ function BannerSection() {
                   className="object-cover"
                   loading="eager"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
                 />
               </div>
             </div>
