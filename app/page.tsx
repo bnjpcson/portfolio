@@ -86,6 +86,8 @@ function BannerSection() {
                   alt={"Profile"}
                   fill
                   className="object-cover"
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <h1 className="font-bold text-5xl flex flex-col items-start gap-3">
@@ -169,6 +171,8 @@ function BannerSection() {
                   alt={"Profile"}
                   fill
                   className="object-cover"
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             </div>
@@ -178,8 +182,6 @@ function BannerSection() {
     </div>
   );
 }
-
-
 
 export default function Home() {
   return (

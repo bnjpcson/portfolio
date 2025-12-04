@@ -97,6 +97,7 @@ export function ContactForm() {
         <Input
           type="text"
           name="name"
+          id="name"
           placeholder="Your Name"
           value={form.name}
           onChange={handleChange}
@@ -112,6 +113,7 @@ export function ContactForm() {
         <Input
           type="email"
           name="email"
+          id="email"
           placeholder="Your Email"
           value={form.email}
           onChange={handleChange}
@@ -126,6 +128,7 @@ export function ContactForm() {
         </Label>
         <Textarea
           name="message"
+          id="message"
           placeholder="Your Message"
           rows={20}
           value={form.message}
