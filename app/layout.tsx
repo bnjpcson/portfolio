@@ -14,7 +14,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
-  display: "swap",
+  display: "optional",
 });
 
 export const metadata: Metadata = {
@@ -97,10 +97,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Load reCAPTCHA v3 */}
-        <Script
+        {/* <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           strategy="afterInteractive"
-        />
+        /> */}
       </head>
       <body className={`${poppins.variable} antialiased`}>
         <ThemeProvider
